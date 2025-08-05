@@ -8,7 +8,7 @@ cluster_distributions(dist_file, reg=0.5, n_clusters=None, calculate_barycenter=
 This function performs hierarchical clustering of empirical probability distributions using the regularized Wasserstein distance. It reads a JSON-formatted input file containing a list of distributions, computes pairwise regularized Wasserstein distances between them, and applies agglomerative clustering. It returns two JSON files: One containing the empirical distributions and their corresponding clusters and another containing barycenters of the clusters.  
 
 Function Parameters:
-dist_file: JSON file containing the list of distributions. An example of such file is in the test.txt file in src folder. 
+dist_file: JSON file containing the list of distributions. An example of such file is in the JSON_test.txt file in src folder. 
 
 reg (float): Entropic regularization parameter for the regularized Wasserstein distance.
 
