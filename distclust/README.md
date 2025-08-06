@@ -1,4 +1,8 @@
+The package can be installed using 
 
+```python
+pip install --index-url https://pypi.org/simple/ --no-deps distclust
+```
 
 ## Main function
 ```python
