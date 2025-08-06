@@ -38,7 +38,7 @@ It takes a JSON-formatted string that encodes a list of distributions, computes 
   - `"id"`: The identifier of the distribution.  
   - `"data_points"`: A list of tuples representing the data points.  
 
-  Example format: [`src/distclust/JSON_test.txt`](src/distclust/JSON_test.txt)
+  Example format: [`[src/distclust/JSON_test.txt](https://github.com/mohammadmgh78/Agglomerative_Clustering_Distribution/blob/main/distclust/JSON_test.txt)`](here)
 
 - **`reg`** *(float)*:  
   Entropic regularization parameter for the Wasserstein distance. Must be positive.
