@@ -52,3 +52,18 @@ If `calculate_barycenter=False`:
 If `calculate_barycenter=True`:
 - **`json_inputs`** *(str)*: JSON with distributions and their cluster labels.
 - **`json_barycenters`** *(str)*: JSON with cluster barycenters (supports and probabilities).
+
+
+We also provide the following functions that might be useful to some users:
+## Core Functions in `distclust`
+
+These are the primary functions used for simulation output clustering, optimal transport computation, and barycenter calculation.
+
+1. **`density_calc`** – Compute empirical probability masses.  
+2. **`density_calc_list`** – Batch probability mass computation.  
+3. **`fill_ot_distance`** – Compute and store OT distances between all systems.  
+4. **`calculate_OT_cost`** – Entropic OT via Sinkhorn.  
+5. **`plot_dendrogram`** – Dendrogram visualization.  
+6. **`silhouette_score_agglomerative`** – Choose number of clusters.  
+7. **`find_barycenter`** – Compute Wasserstein barycenter.  
+8. **`calculate_OT_cost_bary`** – OT computation for barycenter step.  
