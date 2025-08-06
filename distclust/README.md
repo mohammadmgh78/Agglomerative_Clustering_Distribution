@@ -39,7 +39,7 @@ It takes a JSON-formatted string that encodes a list of distributions, computes 
   - `"data_points"`: A list of tuples representing the data points.  
 
 
-Example format: [`distclust/JSON_test.txt`](distclust/JSON_test.txt)  
+Example format: [`JSON_test.txt`](JSON_test.txt)  
 
 - **`reg`** *(float)*:  
   Entropic regularization parameter for the Wasserstein distance. Must be positive.
