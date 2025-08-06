@@ -1,7 +1,7 @@
 The package can be installed using 
 
 ```python
-pip install --index-url https://pypi.org/simple/ --no-deps distclust
+pip install --index-url https://pypi.org/simple/ --no-deps distclust==0.0.3
 ```
 
 ## Main function
