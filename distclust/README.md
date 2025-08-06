@@ -22,16 +22,21 @@ cluster_distributions(
 
 ## Description
 This function performs hierarchical (agglomerative) clustering of empirical probability distributions using the *regularized (entropic) Wasserstein* distance.  
-It takes a JSON-formatted string that encodes a list of distributions, computes all pairwise regularized Wasserstein distances, and then applies agglomerative clustering.
+It takes a JSON-formatted string that encodes a list of distributions, computes all pairwise regularized Wasserstein distances, and then performs agglomerative clustering.
 
 - Returns one JSON string with each distribution and its assigned cluster.
-- If `calculate_barycenter=True`, it also computes barycenters for each cluster and returns a second JSON string with those barycenters.
+- If `calculate_barycenter=True`, it also computes barycenters of each cluster and returns a second JSON string with the barycenters.
 
 ---
 
-## Function parameters
+Function parameters\\
 
-- **`dist_file`** *(str)*: JSON string containing the list of distributions. An example format is in `src/JSON_test.txt`.
+- **`dist_file`** *(str)*: A JSON-formatted string containing a dictionary of distributions.  
+  Each key in the dictionary is a **distribution ID**, mapped to another dictionary with the keys:
+  - `"id"`: The identifier of the distribution.
+  - `"data_points"`: A list of tuples representing the data points.  
+  An example format is provided in [`src/JSON_test.txt`](src/JSON_test.txt).
+
 - **`reg`** *(float)*: Entropic regularization parameter for the Wasserstein distance.
 - **`n_clusters`** *(int or None)*: Number of clusters. If `None`, the function chooses the number using the silhouette index.
 - **`calculate_barycenter`** *(bool)*: If `True`, compute a regularized Wasserstein barycenter for each cluster. If `False`, only clustering results are returned.
@@ -44,7 +49,7 @@ It takes a JSON-formatted string that encodes a list of distributions, computes 
 
 ---
 
-## Returns
+Returns\\
 
 If `calculate_barycenter=False`:
 - **`json_inputs`** *(str)*: JSON with distributions and their cluster labels.
