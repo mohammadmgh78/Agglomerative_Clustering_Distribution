@@ -55,7 +55,7 @@ If `calculate_barycenter=True`:
 
 
 We also provide the following functions that might be useful to some users:
-## Core Functions in `distclust`
+## Other Functions in `distclust`
 
 These are the primary functions used for simulation output clustering, optimal transport computation, and barycenter calculation.
 
