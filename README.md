@@ -9,7 +9,7 @@ This link will be updated once the final published version becomes available.
 The package can be installed using 
 
 ```python
-pip install --index-url https://pypi.org/simple/ --no-deps distclust==0.0.3
+pip install --index-url https://pypi.org/simple/ --no-deps distclust==0.0.4
 ```
 
 ## Main function
