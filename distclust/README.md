@@ -8,7 +8,7 @@ This link will be updated once the final published version becomes available.
 The package can be installed using 
 
 ```python
-pip install --index-url https://pypi.org/simple/ --no-deps distclust==0.0.9
+pip install --index-url https://pypi.org/simple/ --no-deps distclust==1.0.0
 ```
 
 ## Main function
@@ -108,6 +108,7 @@ We also provide the following functions that might be useful to some users:
 ## References
 
 [1] Marco Cuturi and Arnaud Doucet. [**Fast computation of Wasserstein barycenters.**](https://proceedings.mlr.press/v32/cuturi14.html) In *Proceedings of the 31st International Conference on Machine Learning (ICML)*, pp. 685–693, 2014.  
+
 
 
 
