@@ -53,16 +53,15 @@ It takes a JSON-formatted string that encodes a list of distributions, computes 
   Convergence threshold for the Sinkhorn iterations.
 
 - **`num_of_iterations`** *(int)*:  
-  Maximum number of Sinkhorn iterations for each OT distance computation.
-
-- **`plt_dendrogram`** *(bool)*:  
-  If `True`, generate and display the dendrogram plot.  
-  If a file path is provided (`path_dendrogram`), also save it.
+  Maximum number of iterations for each regularized Wasserstein distance computation.
+  
 - **`plt_dendrogram`** : bool, optional (default=True)
         If True, display a dendrogram of the hierarchical clustering based on OT distances.
         If `path_dendrogram` is provided, the plot is also saved to the specified path.
+  
 - **`path_dendrogram`** : str or None, optional (default=None)
         If provided, path to save the dendrogram plot. Ignored if `plt_dendrogram=False`.
+  
 - **`sup_barycenter`** *(int)*:  
   Number of support points to initialize for barycenter computation.
 
