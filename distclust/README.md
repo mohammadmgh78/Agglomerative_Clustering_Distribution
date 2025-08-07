@@ -92,8 +92,16 @@ We also provide the following functions that might be useful to some users:
 
 1. **`density_calc`** – Compute empirical probability masses.  
 2. **`density_calc_list`** – Batch probability mass computation.  
-3. **`fill_ot_distance`** – Compute and store regularized Wasserstein distances between all systems.  
+3. **`fill_ot_distance`** – Compute and store regularized Wasserstein distances between all systems.  (Cuturi and Doucet (2014) [1])
 4. **`plot_dendrogram`** – Dendrogram visualization.  
 5. **`silhouette_score_agglomerative`** – Choose number of clusters.  
-6. **`find_barycenter`** – Compute Wasserstein barycenter.  
-7. **`calculate_OT_cost_bary`** – OT computation for barycenter step.  
+6. **`find_barycenter`** – Compute Wasserstein barycenter.  (Cuturi and Doucet (2014) [1])
+7. **`calculate_OT_cost_bary`** – OT computation for barycenter step.
+
+
+## References
+
+[1] Marco Cuturi and Arnaud Doucet.  
+**Fast computation of Wasserstein barycenters.**  
+In *Proceedings of the 31st International Conference on Machine Learning (ICML)*, pp. 685–693, 2014.  
+[Link to paper](https://proceedings.mlr.press/v32/cuturi14.html)
