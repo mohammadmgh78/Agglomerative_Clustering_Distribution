@@ -8,12 +8,12 @@ This link will be updated once the final published version becomes available.
 The package can be installed using 
 
 ```python
-pip install --index-url https://pypi.org/simple/ --no-deps distclust==0.0.7
+pip install --index-url https://pypi.org/simple/ --no-deps distclust==0.0.8
 ```
 
 ## Main function
 ```python
-cluster_distributions(
+dict_clusters, dict_barycenters = cluster_distributions(
     dist_file,
     reg=0.5,
     n_clusters=None,
@@ -110,5 +110,6 @@ We also provide the following functions that might be useful to some users:
 
 [1] Marco Cuturi and Arnaud Doucet.  
 [**Fast computation of Wasserstein barycenters.**](https://proceedings.mlr.press/v32/cuturi14.html) In *Proceedings of the 31st International Conference on Machine Learning (ICML)*, pp. 685–693, 2014.  
+
 
 
