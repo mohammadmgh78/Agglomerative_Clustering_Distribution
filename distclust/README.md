@@ -8,7 +8,7 @@ This link will be updated once the final published version becomes available.
 The package can be installed using 
 
 ```python
-pip install --index-url https://pypi.org/simple/ --no-deps distclust==0.0.8
+pip install --index-url https://pypi.org/simple/ --no-deps distclust==0.0.9
 ```
 
 ## Main function
@@ -63,7 +63,7 @@ It takes a JSON-formatted string that encodes a list of distributions, computes 
   Maximum number of iterations for each regularized Wasserstein distance computation.
   
 - **`plt_dendrogram`** : bool, optional (default=True)
-        If True, display a dendrogram of the hierarchical clustering based on OT distances.
+        If True, display a dendrogram of the hierarchical clustering.
         If `path_dendrogram` is provided, the plot is also saved to the specified path.
   
 - **`path_dendrogram`** : str or None, optional (default=None)
@@ -103,7 +103,6 @@ We also provide the following functions that might be useful to some users:
 4. **`plot_dendrogram`** – Dendrogram visualization.  
 5. **`silhouette_score_agglomerative`** – Choose number of clusters.  
 6. **`find_barycenter`** – Compute Wasserstein barycenter.  (Cuturi and Doucet (2014) [1])
-7. **`calculate_OT_cost_bary`** – OT computation for barycenter step.
 
 
 ## References
