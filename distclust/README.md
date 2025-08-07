@@ -1,6 +1,5 @@
 A Python package implementing the clustering algorithm proposed in the paper  
-**"An Agglomerative Clustering Algorithm for Simulation Output Distributions Using Regularized Wasserstein Distance"**,  
-accepted in the *INFORMS Journal on Data Science*.
+**"An Agglomerative Clustering Algorithm for Simulation Output Distributions Using Regularized Wasserstein Distance"**, accepted to the *INFORMS Journal on Data Science*.
 The preprint is available on [arXiv:2407.12100](https://arxiv.org/abs/2407.12100).  
 This link will be updated once the final published version becomes available.
 
@@ -30,7 +29,7 @@ cluster_distributions(
 ```
 
 ## Description
-This function performs hierarchical (agglomerative) clustering of empirical probability distributions using the *regularized (entropic) Wasserstein* distance.  
+This function performs hierarchical (agglomerative) clustering of empirical probability distributions using the regularized (entropic) Wasserstein distance.  
 It takes a JSON-formatted string that encodes a list of distributions, computes all pairwise regularized Wasserstein distances, and then performs agglomerative clustering.
 
 - Returns one dictionary with each distribution and its assigned cluster.
@@ -40,7 +39,7 @@ It takes a JSON-formatted string that encodes a list of distributions, computes 
 
 ### Function Parameters
 
-- **`dist_file`** *(str)*:  
+- **`dist_file`** *(dict)*:  
   A dictionary containing a dictionary of distributions.  
   Each key in the dictionary is a **distribution number**, mapped to another dictionary with:
   - `"id"`: The identifier of the distribution.  
@@ -84,11 +83,11 @@ It takes a JSON-formatted string that encodes a list of distributions, computes 
 ### Returns
 
 If `calculate_barycenter=False`:
-- **`dict_clusters`** *(str)*: A dictionary with each distribution's ID, real data points, and assigned cluster label.
+- **`dict_clusters`** *(dict)*: A dictionary with each distribution's ID, real data points, and assigned cluster label.
 
 If `calculate_barycenter=True`:
-- **`dict_clusters`** *(str)*: A dictionary with each distribution's ID, real data points, and assigned cluster label.
-- **`dict_barycenters`** *(str)*: A dictionary with each cluster's barycenter, including unnormalized supports and probability masses.
+- **`dict_clusters`** *(dict)*: A dictionary with each distribution's ID, real data points, and assigned cluster label.
+- **`dict_barycenters`** *(dict)*: A dictionary with each cluster's barycenter, including unnormalized supports and probability masses.
 
 If `plt_dendrogram=True`:
 - Displays the dendrogram plot.  
@@ -110,7 +109,6 @@ We also provide the following functions that might be useful to some users:
 ## References
 
 [1] Marco Cuturi and Arnaud Doucet.  
-**Fast computation of Wasserstein barycenters.**  
-In *Proceedings of the 31st International Conference on Machine Learning (ICML)*, pp. 685–693, 2014.  
-[Link to paper](https://proceedings.mlr.press/v32/cuturi14.html)
+[**Fast computation of Wasserstein barycenters.**](https://proceedings.mlr.press/v32/cuturi14.html) In *Proceedings of the 31st International Conference on Machine Learning (ICML)*, pp. 685–693, 2014.  
+
 
