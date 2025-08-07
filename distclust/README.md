@@ -9,7 +9,7 @@ This link will be updated once the final published version becomes available.
 The package can be installed using 
 
 ```python
-pip install --index-url https://pypi.org/simple/ --no-deps distclust==0.0.6
+pip install --index-url https://pypi.org/simple/ --no-deps distclust==0.0.7
 ```
 
 ## Main function
@@ -33,20 +33,20 @@ cluster_distributions(
 This function performs hierarchical (agglomerative) clustering of empirical probability distributions using the *regularized (entropic) Wasserstein* distance.  
 It takes a JSON-formatted string that encodes a list of distributions, computes all pairwise regularized Wasserstein distances, and then performs agglomerative clustering.
 
-- Returns one JSON string with each distribution and its assigned cluster.
-- If `calculate_barycenter=True`, it also computes barycenters of each cluster and returns a second JSON string with the barycenters.
+- Returns one dictionary with each distribution and its assigned cluster.
+- If `calculate_barycenter=True`, it also computes barycenters of each cluster and returns a second dictionary with the barycenters.
 
 ---
 
 ### Function Parameters
 
 - **`dist_file`** *(str)*:  
-  A JSON-formatted string containing a dictionary of distributions.  
+  A dictionary containing a dictionary of distributions.  
   Each key in the dictionary is a **distribution number**, mapped to another dictionary with:
   - `"id"`: The identifier of the distribution.  
   - `"data_points"`: A list of tuples representing the data points.  
 
-  Example format: [`An example in Github`](https://github.com/mohammadmgh78/Agglomerative_Clustering_Distribution/blob/main/distclust/JSON_test.txt)
+  Example format: [`An example in Github`](https://github.com/mohammadmgh78/Agglomerative_Clustering_Distribution/blob/main/distclust/dict_test.txt)
 - **`reg`** *(float)*:  
   Entropic regularization parameter for the Wasserstein distance. Must be positive.
 
@@ -84,11 +84,11 @@ It takes a JSON-formatted string that encodes a list of distributions, computes 
 ### Returns
 
 If `calculate_barycenter=False`:
-- **`json_clusters`** *(str)*: JSON with each distribution's ID, real data points, and assigned cluster label.
+- **`dict_clusters`** *(str)*: A dictionary with each distribution's ID, real data points, and assigned cluster label.
 
 If `calculate_barycenter=True`:
-- **`json_clusters`** *(str)*: JSON with each distribution's ID, real data points, and assigned cluster label.
-- **`json_barycenters`** *(str)*: JSON with each cluster's barycenter, including unnormalized supports and probability masses.
+- **`dict_clusters`** *(str)*: A dictionary with each distribution's ID, real data points, and assigned cluster label.
+- **`dict_barycenters`** *(str)*: A dictionary with each cluster's barycenter, including unnormalized supports and probability masses.
 
 If `plt_dendrogram=True`:
 - Displays the dendrogram plot.  
@@ -113,3 +113,4 @@ We also provide the following functions that might be useful to some users:
 **Fast computation of Wasserstein barycenters.**  
 In *Proceedings of the 31st International Conference on Machine Learning (ICML)*, pp. 685–693, 2014.  
 [Link to paper](https://proceedings.mlr.press/v32/cuturi14.html)
+
