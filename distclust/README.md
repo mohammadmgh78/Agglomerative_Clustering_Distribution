@@ -38,9 +38,7 @@ It takes a JSON-formatted string that encodes a list of distributions, computes 
   - `"id"`: The identifier of the distribution.  
   - `"data_points"`: A list of tuples representing the data points.  
 
-
-Example format: [`JSON_test.txt`](JSON_test.txt)  
-
+  Example format: [`(https://github.com/mohammadmgh78/Agglomerative_Clustering_Distribution/blob/main/distclust/JSON_test.txt)`]((https://github.com/mohammadmgh78/Agglomerative_Clustering_Distribution/blob/main/distclust/JSON_test.txt))
 - **`reg`** *(float)*:  
   Entropic regularization parameter for the Wasserstein distance. Must be positive.
 
@@ -60,7 +58,11 @@ Example format: [`JSON_test.txt`](JSON_test.txt)
 - **`plt_dendrogram`** *(bool)*:  
   If `True`, generate and display the dendrogram plot.  
   If a file path is provided (`path_dendrogram`), also save it.
-
+- **`plt_dendrogram`** : bool, optional (default=True)
+        If True, display a dendrogram of the hierarchical clustering based on OT distances.
+        If `path_dendrogram` is provided, the plot is also saved to the specified path.
+- **`path_dendrogram`** : str or None, optional (default=None)
+        If provided, path to save the dendrogram plot. Ignored if `plt_dendrogram=False`.
 - **`sup_barycenter`** *(int)*:  
   Number of support points to initialize for barycenter computation.
 
