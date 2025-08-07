@@ -46,7 +46,7 @@ It takes a JSON-formatted string that encodes a list of distributions, computes 
   - `"id"`: The identifier of the distribution.  
   - `"data_points"`: A list of tuples representing the data points.  
 
-  Example format: [`(https://github.com/mohammadmgh78/Agglomerative_Clustering_Distribution/blob/main/distclust/JSON_test.txt)`]((https://github.com/mohammadmgh78/Agglomerative_Clustering_Distribution/blob/main/distclust/JSON_test.txt))
+  Example format: [`(https://github.com/mohammadmgh78/Agglomerative_Clustering_Distribution/blob/main/distclust/JSON_test.txt)`](https://github.com/mohammadmgh78/Agglomerative_Clustering_Distribution/blob/main/distclust/JSON_test.txt)
 - **`reg`** *(float)*:  
   Entropic regularization parameter for the Wasserstein distance. Must be positive.
 
@@ -61,16 +61,15 @@ It takes a JSON-formatted string that encodes a list of distributions, computes 
   Convergence threshold for the Sinkhorn iterations.
 
 - **`num_of_iterations`** *(int)*:  
-  Maximum number of Sinkhorn iterations for each OT distance computation.
-
-- **`plt_dendrogram`** *(bool)*:  
-  If `True`, generate and display the dendrogram plot.  
-  If a file path is provided (`path_dendrogram`), also save it.
+  Maximum number of iterations for each regularized Wasserstein distance computation.
+  
 - **`plt_dendrogram`** : bool, optional (default=True)
         If True, display a dendrogram of the hierarchical clustering based on OT distances.
         If `path_dendrogram` is provided, the plot is also saved to the specified path.
+  
 - **`path_dendrogram`** : str or None, optional (default=None)
         If provided, path to save the dendrogram plot. Ignored if `plt_dendrogram=False`.
+  
 - **`sup_barycenter`** *(int)*:  
   Number of support points to initialize for barycenter computation.
 
@@ -101,8 +100,16 @@ We also provide the following functions that might be useful to some users:
 
 1. **`density_calc`** – Compute empirical probability masses.  
 2. **`density_calc_list`** – Batch probability mass computation.  
-3. **`fill_ot_distance`** – Compute and store regularized Wasserstein distances between all systems.  
+3. **`fill_ot_distance`** – Compute and store regularized Wasserstein distances between all systems.  (Cuturi and Doucet (2014) [1])
 4. **`plot_dendrogram`** – Dendrogram visualization.  
 5. **`silhouette_score_agglomerative`** – Choose number of clusters.  
-6. **`find_barycenter`** – Compute Wasserstein barycenter.  
-7. **`calculate_OT_cost_bary`** – OT computation for barycenter step.  
+6. **`find_barycenter`** – Compute Wasserstein barycenter.  (Cuturi and Doucet (2014) [1])
+7. **`calculate_OT_cost_bary`** – OT computation for barycenter step.
+
+
+## References
+
+[1] Marco Cuturi and Arnaud Doucet.  
+**Fast computation of Wasserstein barycenters.**  
+In *Proceedings of the 31st International Conference on Machine Learning (ICML)*, pp. 685–693, 2014.  
+[Link to paper](https://proceedings.mlr.press/v32/cuturi14.html)
