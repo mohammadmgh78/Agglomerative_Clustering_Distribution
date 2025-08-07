@@ -107,8 +107,8 @@ We also provide the following functions that might be useful to some users:
 
 ## References
 
-[1] Marco Cuturi and Arnaud Doucet.  
-[**Fast computation of Wasserstein barycenters.**](https://proceedings.mlr.press/v32/cuturi14.html) In *Proceedings of the 31st International Conference on Machine Learning (ICML)*, pp. 685–693, 2014.  
+[1] Marco Cuturi and Arnaud Doucet. [**Fast computation of Wasserstein barycenters.**](https://proceedings.mlr.press/v32/cuturi14.html) In *Proceedings of the 31st International Conference on Machine Learning (ICML)*, pp. 685–693, 2014.  
+
 
 
 
