@@ -1,7 +1,11 @@
+The code for paper titled **"An Agglomerative Clustering Algorithm for Simulation Output Distributions Using Regularized Wasserstein Distance"**, accepted in the *INFORMS Journal on Data Science*.
+The preprint is available on [arXiv:2407.12100](https://arxiv.org/abs/2407.12100).  
+This link will be updated once the final published version becomes available.
+
 Each folder in this repository serves a specific purpose:
 
 - **`code/`**  
-  Contains all the code used to generate the dataset.  
+  Contains all the code used to perform the analysis in the paper.  
   Refer to the **Code Instruction** section for further usage details.
 
 - **`data/`**  
